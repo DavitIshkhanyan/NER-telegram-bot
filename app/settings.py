@@ -3,10 +3,8 @@ from typing import Optional
 from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
-    model_path: str = os.getenv("HF_MODEL", "DavitIshkhanyan/best-ner-model")
+    HF_MODEL: str = os.getenv("HF_MODEL", "DavitIshkhanyan/best-ner-model")
     TELEGRAM_TOKEN: str = os.getenv("TELEGRAM_TOKEN", "")
-    # HOST: str = os.getenv("HOST", "127.0.0.1")
-    # PORT: int = int(os.getenv("PORT", "8000"))
     HOST: str = os.getenv("HOST", "0.0.0.0")
     PORT: int = int(os.getenv("PORT", "8000"))
     # bot_mode: str = "polling"

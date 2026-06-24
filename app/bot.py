@@ -5,7 +5,7 @@ import os
 # Your path fix works perfectly for absolute imports
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from app.settings import settings
+from .settings import settings
 from telegram import Update
 from telegram.ext import (
     Application,

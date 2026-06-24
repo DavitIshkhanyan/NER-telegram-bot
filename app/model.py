@@ -10,8 +10,8 @@ LABEL_MAP = {
 
 ner_pipeline = pipeline(
     "token-classification",
-    model=settings.model_path,
-    tokenizer=settings.model_path,
+    model=settings.HF_MODEL,
+    tokenizer=settings.HF_MODEL,
     aggregation_strategy="simple"
 )
 

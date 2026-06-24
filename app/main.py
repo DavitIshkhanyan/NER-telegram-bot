@@ -1,15 +1,14 @@
-from fastapi import FastAPI
-from .schemas import PredictRequest, PredictResponse
-from .model import predict_entities
-
-app = FastAPI(title="NER API")
-
-@app.get("/health")
-async def health():
-    return {"status": "ok"}
-
-@app.post("/predict", response_model=PredictResponse)
-async def predict(payload: PredictRequest):
-    entities = predict_entities(payload.text)
-    print(entities)
-    return {"entities": entities}
+# import threading
+# import uvicorn
+# from .api import app
+# from .bot import run_bot
+# from .settings import settings
+#
+# if __name__ == "__main__":
+#     threading.Thread(target=run_bot, daemon=True).start()
+#
+#     uvicorn.run(
+#         app,
+#         host=settings.HOST,
+#         port=settings.PORT,
+#     )
