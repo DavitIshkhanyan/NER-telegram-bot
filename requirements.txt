@@ -8,3 +8,4 @@ pydantic>=1.10
 transformers>=4.30  # optional, only if running local model
 torch>=2.0  # optional, only if running local model
 pydantic-settings>=2.14.2
+gradio-client>=2.5.0
