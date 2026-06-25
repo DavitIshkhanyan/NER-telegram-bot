@@ -7,6 +7,7 @@ class Settings(BaseSettings):
     TELEGRAM_TOKEN: str = os.getenv("TELEGRAM_TOKEN", "")
     HOST: str = os.getenv("HOST", "0.0.0.0")
     PORT: int = int(os.getenv("PORT", "8000"))
+    RENDER_URL: str = os.getenv("RENDER_URL", "")
     # bot_mode: str = "polling"
     # webhook_url: str = "https://example.com/bot/webhook/change_me"
     # webhook_secret: str = "change_me"

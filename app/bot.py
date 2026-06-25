@@ -91,4 +91,10 @@ app.add_handler(
 )
 
 # Start the bot
-app.run_polling()
+# app.run_polling()
+app.run_webhook(
+    listen="0.0.0.0",
+    port=int(os.environ.get("PORT", 7860)),  # Render expects PORT
+    url_path=settings.TELEGRAM_TOKEN,
+    webhook_url=f"https://{settings.RENDER_URL}/{settings.TELEGRAM_TOKEN}"
+)
